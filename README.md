@@ -1,11 +1,9 @@
 <h3 align="center">
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-Catppuccin for <a href="https://github.com/90-proof/copyparty">Copyparty</a>
+Catppuccin for <a href="https://github.com/90-proof/copyparty">copyparty</a>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
-
-Soothing pastel theme for [Copyparty](https://github.com/9001/copyparty), with four beautiful color palettes.
 
 ## Previews
 
@@ -29,7 +27,7 @@ Soothing pastel theme for [Copyparty](https://github.com/9001/copyparty), with f
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
 </details>
 
-## Installation
+## Usage
 
 ### Automatic Installation (Recommended)
 
@@ -45,7 +43,7 @@ cd copyparty
 ```
 
 The script will:
-- Auto-detect your Copyparty installation
+- Auto-detect your copyparty installation
 - Let you choose your preferred flavor
 - Optionally customize the accent color
 - Backup any existing customstyles.css
@@ -53,17 +51,17 @@ The script will:
 ### Manual Installation
 
 1. Download the theme file for your preferred flavor:
-   - `catppuccin-macchiato.css` - Dark theme with blue accent
-   - `catppuccin-latte.css` - Light theme with blue accent
-   - `catppuccin-mocha.css` - Dark theme with purple accent
-   - `catppuccin-frappe.css` - Light theme with lavender accent
+  - `catppuccin-latte.css` - Lightest theme
+  - `catppuccin-frappe.css` - Light theme
+  - `catppuccin-macchiato.css` - Dark theme
+  - `catppuccin-mocha.css` - Darkest theme
 
-2. Copy the CSS file to your Copyparty directory as `customstyles.css`:
+3. Copy the CSS file to your copyparty directory as `customstyles.css`:
    ```bash
    cp catppuccin-macchiato.css ~/copyparty/customstyles.css
    ```
 
-3. Refresh your Copyparty browser tab to apply the theme
+4. Refresh your copyparty browser tab to apply the theme
 
 ## Customization
 
@@ -92,18 +90,9 @@ You can also use the interactive accent color selection in the installer:
 # Select "yes" when asked about customizing accent color
 ```
 
-## Flavor Differences
-
-| Flavor | Type | Accent Color | Best For |
-|--------|------|--------------|----------|
-| **Macchiato** | Dark | Blue | Default, high contrast |
-| **Latte** | Light | Blue | Bright environments, daytime |
-| **Mocha** | Dark | Purple | Unique, artistic preference |
-| **Frappé** | Light | Lavender | Creative work, light environment |
-
 ## Uninstallation
 
-To revert to the default Copyparty theme:
+To revert to the default copyparty theme:
 
 ```bash
 # Remove the custom CSS file
@@ -140,18 +129,18 @@ See the CSS files for the complete list of customizable properties.
 - Hard refresh the page (Ctrl+F5 or Cmd+Shift+R)
 - Make sure the CSS file is in the correct location
 
-### Wrong Copyparty path detected?
-- Run: `./install.sh` and manually enter your Copyparty directory
-- Or copy the CSS file manually to your Copyparty installation
+### Wrong copyparty path detected?
+- Run: `./install.sh` and manually enter your copyparty directory
+- Or copy the CSS file manually to your copyparty installation
 
 ### Want to modify colors?
-- Edit the `customstyles.css` file in your Copyparty directory
+- Edit the `customstyles.css` file in your copyparty directory
 - Update the CSS variables for your desired colors
 - Refresh your browser to see changes
 
 ## 💝 Thanks to
 
-- [Copyparty](https://github.com/90-proof/copyparty) - Amazing file sharing application
+- [copyparty](https://github.com/90-proof/copyparty) - Amazing file sharing application
 - [Catppuccin](https://github.com/catppuccin) - Beautiful color palette
 
 ---
