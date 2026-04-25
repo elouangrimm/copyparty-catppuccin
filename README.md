@@ -11,7 +11,7 @@ Catppuccin for <a href="https://github.com/90-proof/copyparty">Copyparty</a>
 <a href="https://github.com/catppuccin/copyparty/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/copyparty?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
-Soothing pastel theme for [Copyparty](https://github.com/90-proof/copyparty), with four beautiful color palettes.
+Soothing pastel theme for [Copyparty](https://github.com/9001/copyparty), with four beautiful color palettes.
 
 ## Previews
 
