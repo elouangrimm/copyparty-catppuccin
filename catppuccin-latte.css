@@ -1,5 +1,28 @@
 html.fy {
     color-scheme: light;
+    /*
+     * Catppuccin Theme for Copyparty
+     *
+     * To change the accent color, change the --ACCENT_NAME variable below.
+     * Available options: var(--ROSEWATER), var(--FLAMINGO), var(--PINK), var(--MAUVE),
+     * var(--RED), var(--MAROON), var(--PEACH), var(--YELLOW), var(--GREEN), var(--TEAL),
+     * var(--SKY), var(--SAPPHIRE), var(--BLUE), var(--LAVENDER)
+     */
+    --ACCENT_NAME: var(--BLUE);
+    --ROSEWATER: #dc8a78;
+    --FLAMINGO: #dd7878;
+    --PINK: #ea76cb;
+    --MAUVE: #8839ef;
+    --RED: #d20f39;
+    --MAROON: #e64553;
+    --PEACH: #fe640b;
+    --YELLOW: #df8e1d;
+    --GREEN: #40a02b;
+    --TEAL: #179299;
+    --SKY: #04a5e5;
+    --SAPPHIRE: #209fb5;
+    --BLUE: #1e66f5;
+    --LAVENDER: #7287fd;
     --fg: #4c4f69;
     --fg-max: #dc8a78;
     --fg2-max: #dd7878;
@@ -26,9 +49,9 @@ html.fy {
     --a-hil: var(--ctp-accent-hi);
     --a-dark: #8839ef;
     --a-gray: #9ca0b0;
-    --a-h-bg: rgba(var(--ctp-accent-rgb), 0.14);
+    --a-h-bg: color-mix(in srgb, var(--ctp-accent) 14%, transparent);
     --btn-fg: var(--a);
-    --btn-bg: rgba(var(--ctp-accent-rgb), 0.14);
+    --btn-bg: color-mix(in srgb, var(--ctp-accent) 14%, transparent);
     --btn-h-fg: var(--a-hil);
     --btn-h-bg: #bcc0cc;
     --btn-1-fg: var(--ctp-accent-ink);
@@ -111,9 +134,8 @@ html.fy {
     --err-bg: #d20f39;
     --err-b1: #e64553;
     --err-ts: #dce0e8;
-    --ctp-accent: #1e66f5;
-    --ctp-accent-alt: #209fb5;
-    --ctp-accent-hi: #04a5e5;
-    --ctp-accent-rgb: 30, 102, 245;
+    --ctp-accent: var(--ACCENT_NAME);
+    --ctp-accent-alt: var(--ACCENT_NAME);
+    --ctp-accent-hi: var(--ACCENT_NAME);
     --ctp-accent-ink: #eff1f5;
 }

@@ -1,156 +1,160 @@
 <h3 align="center">
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Catppuccin logo"/>
+<br/>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-Catppuccin for <a href="https://github.com/90-proof/copyparty">copyparty</a>
+Catppuccin for <a href="https://github.com/9001/copyparty">Copyparty</a>
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
+
+<!--
+<p align="center">
+<a href="https://github.com/elouangrimm/copyparty-catppuccin/stargazers"><img src="https://img.shields.io/github/stars/elouangrimm/copyparty-catppuccin?style=for-the-badge&colorA=1e1e2e&colorB=cba6f7" alt="Stars"></a>
+<a href="https://github.com/elouangrimm/copyparty-catppuccin/issues"><img src="https://img.shields.io/github/issues/elouangrimm/copyparty-catppuccin?style=for-the-badge&colorA=1e1e2e&colorB=f38ba8" alt="Issues"></a>
+<a href="https://github.com/elouangrimm/copyparty-catppuccin/contributors"><img src="https://img.shields.io/github/contributors/elouangrimm/copyparty-catppuccin?style=for-the-badge&colorA=1e1e2e&colorB=a6e3a1" alt="Contributors"></a>
+</p>
+-->
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp"/>
+<br/>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp" alt="Latte preview"/>
 </details>
 
 <details>
-<summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp"/>
+<summary>🪴 Frappe</summary>
+<br/>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp" alt="Frappe preview"/>
 </details>
 
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp"/>
+<br/>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp" alt="Macchiato preview"/>
 </details>
 
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
+<br/>
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp" alt="Mocha preview"/>
 </details>
 
 ## Usage
 
-### Automatic Installation (Recommended)
-
-The easiest way to install is using the provided installation script:
+### One-command install (no clone required)
 
 ```bash
-# Clone or download this repository
-git clone https://github.com/catppuccin/copyparty.git
-cd copyparty
+bash <(curl -fsSL https://raw.githubusercontent.com/elouangrimm/copyparty-catppuccin/main/install.sh)
+```
 
-# Run the installer
+### Local install
+
+```bash
+git clone https://github.com/elouangrimm/copyparty-catppuccin.git
+cd copyparty-catppuccin
 ./install.sh
 ```
 
-The script will:
-- Auto-detect your copyparty installation
-- Let you choose your preferred flavor
-- Optionally customize the accent color
-- Backup any existing customstyles.css
+The installer:
+- Lets you pick any Catppuccin flavor.
+- Lets you pick any official Catppuccin accent name.
+- Backs up any previous installed CSS file.
+- Installs to a path Copyparty can actually serve.
+- Prints exact post-install flags and URL hints.
 
-### Manual Installation
+### Copyparty configuration
 
-1. Download the theme file for your preferred flavor:
-  - `catppuccin-latte.css` - Lightest theme
-  - `catppuccin-frappe.css` - Light theme
-  - `catppuccin-macchiato.css` - Dark theme
-  - `catppuccin-mocha.css` - Darkest theme
+To use this as a custom theme, configure Copyparty with:
 
-3. Copy the CSS file to your copyparty directory as `customstyles.css`:
-   ```bash
-   cp catppuccin-macchiato.css ~/copyparty/customstyles.css
-   ```
+```bash
+--css-browser=/.cpr/w/catppuccin-copyparty.css --themes=11 --theme=10
+```
 
-4. Refresh your copyparty browser tab to apply the theme
+Or, add it to your config, somewhere in `global`:
+
+```conf
+[global]
+  # more options
+  css-browser: /.cpr/w/catppuccin-copyparty.css
+  themes: 11
+  theme: 10
+  # more options
+```
+
+Then you can select it from the UI theme picker or open Copyparty with:
+
+```text
+?theme=10
+```
+
+Notes:
+- If you install to a custom file path instead, use the matching URL in `--css-browser`.
+- A wrong URL causes Copyparty to return HTML instead of CSS, which triggers strict MIME errors in the browser.
 
 ## Customization
 
-### Changing Accent Colors
+Each flavor file exposes a single top-level accent selector:
 
-You can easily customize the accent color by editing your `customstyles.css`:
-
-Find these lines and replace the hex colors:
 ```css
---ctp-accent: #8aadf4;        /* Primary accent color */
---ctp-accent-alt: #7dc4e4;    /* Secondary/hover accent */
---ctp-accent-hi: #91d7e3;     /* Highlighted accent */
+--ACCENT_NAME: var(BLUE);
 ```
 
-**Recommended accent colors from Catppuccin palette:**
-- **Blue**: `#8aadf4`, `#7dc4e4`, `#91d7e3`
-- **Lavender**: `#b7bdf8`, `#89dceb`, `#b4befe`
-- **Mauve**: `#c6a0f6`, `#ca9ee6`, `#cba6f7`
-- **Pink**: `#f5bde6`, `#f5c2e7`, `#f5bde6`
-- **Peach**: `#f5a97f`, `#fab387`, `#f5a97f`
-- **Green**: `#a6da95`, `#a6e3a1`, `#94e2d5`
+Change it to any official accent option:
 
-You can also use the interactive accent color selection in the installer:
-```bash
-./install.sh
-# Select "yes" when asked about customizing accent color
+```text
+ROSEWATER, FLAMINGO, PINK, MAUVE, RED, MAROON, PEACH, YELLOW,
+GREEN, TEAL, SKY, SAPPHIRE, BLUE, LAVENDER
 ```
 
-## Uninstallation
+Example:
 
-To revert to the default copyparty theme:
-
-```bash
-# Remove the custom CSS file
-rm ~/copyparty/customstyles.css
-
-# Or restore from backup if you have one
-cp ~/copyparty/customstyles.css.backup.* ~/copyparty/customstyles.css
+```css
+--ACCENT_NAME: var(MAUVE);
 ```
 
-## Features
-
-✨ **Four Beautiful Flavors** - Choose from light or dark themes
-🎨 **Easy Customization** - Change accent colors in seconds
-🚀 **Simple Installation** - Automated setup script included
-💾 **Safe Installation** - Automatic backup of existing settings
-🎯 **Complete Coverage** - All UI elements properly themed
-
-## Configuration
-
-The theme uses CSS custom properties (variables) for all colors, making it easy to customize. All variables are documented in the CSS files:
-
-- `--fg`: Foreground/text color
-- `--bg`: Background color
-- `--ctp-accent`: Primary accent color
-- `--ctp-accent-alt`: Secondary accent for hover states
-- `--ctp-accent-hi`: Highlight accent color
-
-See the CSS files for the complete list of customizable properties.
+The installer can also set this interactively for you.
 
 ## Troubleshooting
 
-### Theme not applying?
-- Clear your browser cache (Ctrl+Shift+Delete or Cmd+Shift+Delete)
-- Hard refresh the page (Ctrl+F5 or Cmd+Shift+R)
-- Make sure the CSS file is in the correct location
+### Theme not loading and browser says MIME type is text/html
 
-### Wrong copyparty path detected?
-- Run: `./install.sh` and manually enter your copyparty directory
-- Or copy the CSS file manually to your copyparty installation
+Your `--css-browser` URL points to a file Copyparty cannot serve, so it returns an HTML page (often a directory page or 404) instead of CSS.
 
-### Want to modify colors?
-- Edit the `customstyles.css` file in your copyparty directory
-- Update the CSS variables for your desired colors
-- Refresh your browser to see changes
+Fix:
+1. Put the CSS file in a path Copyparty serves.
+2. Ensure `--css-browser` matches that URL exactly.
+3. Hard-refresh (`Ctrl+Shift+R`).
+
+### Theme option missing in UI
+
+Set enough theme slots:
+
+```bash
+--themes=11
+```
+
+If you use `?theme=10`, the index must exist in your configured theme count.
+
+## 🙋 FAQ
+
+- Q: Why install into `/.cpr/w/` by default?
+- A: It avoids most path-mapping mistakes and prevents MIME issues from missing CSS URLs.
+
+- Q: Can I keep using my own webroot path?
+- A: Yes. Install the file there and set `--css-browser` to the exact URL that serves it.
 
 ## 💝 Thanks to
 
-- [copyparty](https://github.com/90-proof/copyparty) - Amazing file sharing application
-- [Catppuccin](https://github.com/catppuccin) - Beautiful color palette
-
----
+- [Copyparty](https://github.com/9001/copyparty)
+- [Catppuccin](https://github.com/catppuccin)
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
 
 <p align="center">
-Copyright &copy; 2024-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
 </p>
 
 <p align="center">
